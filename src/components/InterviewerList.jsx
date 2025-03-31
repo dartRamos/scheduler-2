@@ -1,4 +1,5 @@
 import "./InterviewerList.scss";
+import PropTypes from 'prop-types';
 
 import InterviewerListItem from "./InterviewerListItem";
 
@@ -23,5 +24,11 @@ function InterviewerList(props) {
     </section>
   );
 }
+
+InterviewerList.propTypes = {
+  interviewers: PropTypes.array.isRequired,
+  value: PropTypes.number,
+  onChange: PropTypes.func.isRequired
+};
 
 export default InterviewerList;
